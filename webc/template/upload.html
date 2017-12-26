@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<meta charset="UTF-8">
+				<title>上传</title>
+		</head>
+		<body>
+				<form action="/upload" method="post" enctype="multipart/form-data">
+						<p>{{.Result}}</p>
+						<p><input type="file" name="file" value="" multiple="multiple" /></p> 
+						<input type="submit" name="上传" />
+				</form>
+		</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="UTF-8">
+		<title>下载</title>
+    </head>
+	<body>
+	<form action="/download" method="post">
+		<p>{{.Result}}</p>
+		<p>保存为 <input type="text" name="name"/> </p>
+		<p>输入URL <input type="text" name="url"/> </p>
+		<input type="submit" value="下载" />
+	</form>
+</body>
+</html>
