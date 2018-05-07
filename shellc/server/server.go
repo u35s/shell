@@ -62,6 +62,7 @@ func (this *ShellC) Run() {
 				send.From = this.ID
 				send.RAddr = gconf.String("shell_client_proxy_addr")
 				send.LAddr = gconf.String("shell_client_addr")
+				send.Net = gconf.String("shell_client_proxy_network")
 				gsrvs.SendCmdToServerWithID(this.shelld.ID, &send)
 			}
 		})

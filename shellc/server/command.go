@@ -82,10 +82,12 @@ func (this MCmdRuler) client(mid uint, params map[string]string) bool {
 	case "proxy":
 		raddr := params["2"]
 		laddr := params["3"]
+		net := params["4"]
 		var send cmd.CmdServer_proxy
 		send.From = srv.ID
 		send.LAddr = laddr
 		send.RAddr = raddr
+		send.Net = net
 		gsrvs.SendCmdToServerWithID(srv.shelld.ID, &send)
 	default:
 		return false
